@@ -6,33 +6,16 @@ const voterH = document.getElementById('voterH')//// curent value hot water
 const internet = document.getElementById('internet')// curent value add internet
 const Otoplenie = document.getElementById('Otoplenie')// curent value add warm
 const Musor = document.getElementById('Musor')// curent value add trash
-//--- curent price 
-const electst = document.getElementById('electSt')// curent price electr
-const voterst = document.getElementById('voterSt')// curent price 
-const voterHSt = document.getElementById('voterHSt')// curent price
-const interSt = document.getElementById('interSt')// curent price 
-const musorSt = document.getElementById('musorSt')// curent price
-// --- calc price and show 
-const resultEl = document.getElementById('resultEl')// calc  electr
-const resultHv = document.getElementById('resultHv')// calc cold water
-const resultGv = document.getElementById('resultGv')// calc hat water
-const resultIntern = document.getElementById('resultIntern')// calc  internet
-const resultMusor = document.getElementById('resultMusor')// calc trash
-const resultOtop = document.getElementById('resultOtop')// calc  warm
-const summaAll = document.getElementById('summaAll')// calc
+
 // - buttom
-const submit = document.getElementById('submit') // link with but submi
-const bTarif = document.getElementById('submitTarif') // link with but submitTarif
-// another
-const resultNumRoom = document.getElementById('resultNumRoom')
+const submit = document.getElementById('submit') // link with but submit
 
 
 
 
-
-//add data & calc
+//add data in lh
 submit.onclick = ()=> {
-alert('Дождитесь полной  загрузки страницы')
+
    if (numRum.value =='1') {
    // save old value 
    localStorage.setItem('data1_Old', localStorage.getItem('Data1'))
@@ -44,6 +27,8 @@ alert('Дождитесь полной  загрузки страницы')
    localStorage.setItem('elect1', elect.value)
    localStorage.setItem('voter1', voter.value)
    localStorage.setItem('voterH1', voterH.value)
+   window.location.href = './result.html'
+   return
 }
    if(numRum.value =='2') {
       // save old value 
@@ -56,6 +41,8 @@ alert('Дождитесь полной  загрузки страницы')
       localStorage.setItem('elect2', elect.value)
       localStorage.setItem('voter2', voter.value)
       localStorage.setItem('voterH2', voterH.value)
+      window.location.href = './result.html'
+      return
 }
    if(numRum.value =='3') {
       // save old value 
@@ -68,6 +55,8 @@ alert('Дождитесь полной  загрузки страницы')
       localStorage.setItem('elect3', elect.value)
       localStorage.setItem('voter3', voter.value)
       localStorage.setItem('voterH3', voterH.value)
+      window.location.href = './result.html'
+      return
 }
     if (numRum.value =='4') {
       // save old value 
@@ -80,6 +69,8 @@ alert('Дождитесь полной  загрузки страницы')
       localStorage.setItem('elect4', elect.value)
       localStorage.setItem('voter4', voter.value)
       localStorage.setItem('voterH4', voterH.value)
+      window.location.href = './result.html'
+      return
    
 }
     if (numRum.value =='5') {
@@ -93,18 +84,9 @@ localStorage.setItem('voterH5_Old', localStorage.getItem('voterH5'))
    localStorage.setItem('elect5', elect.value)
    localStorage.setItem('voter5', voter.value)
    localStorage.setItem('voterH5', voterH.value)
+   window.location.href = './result.html'
+   return
 
 }
-}
-
-//edite_price
-
-bTarif.onclick = ()=> {
-   alert('Дождитесь полной  загрузки страницы')
-localStorage.setItem('price_el', electst.value)
-localStorage.setItem('price_wot', voterst.value)
-localStorage.setItem('price_wotH', voterHSt.value)
-localStorage.setItem('price_inter', interSt.value)
-localStorage.setItem('price_trash', musorSt.value)
 }
 
