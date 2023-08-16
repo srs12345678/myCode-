@@ -10,10 +10,10 @@ const submitTr = document.getElementById('submitTarif')
 
 
 submitTr.onclick = ()=> {
+    alert('Дождитесь полной  загрузки страницы')
     let price = [electst.value, voterst.value, voterHSt.value, interSt.value,musorSt.value,otop.value] 
     localStorage.setItem('curPrice',JSON.stringify(price))
      
     }
  
-    {oldVal5,elecPred5,dataPred5,votPred5,votGorPred5,intPred5,musPred5,otopPred5,daPrPred5 }
-
+// перенести элементы 

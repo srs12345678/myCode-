@@ -22,14 +22,19 @@ let curentTarifShowPars = JSON.parse(localStorage.getItem(`curPrice`))
 let curentTarifSh=()=>{
   if(curentTarifShowPars !== null){
     curentTarifShow.textContent= `элект.: ${curentTarifShowPars[0]} руб., хв.: ${curentTarifShowPars[1]} руб., гв.: ${curentTarifShowPars[2]} руб., `
-  return
   }
   curentTarifShow.textContent='тарифы отсутсвуют'
+  return
 }
 curentTarifSh() // call () show tarifs
 
 
-tarifBtn.onclick =()=>{  
+tarifBtn.onclick=()=>{  // add tarif
+  /*
+if (date.value==""){
+alert("введите дату")
+} else {
+  */
   window.location.href=`tarifi.html`
 }
 
