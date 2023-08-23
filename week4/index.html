@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesosns DOM</title>
+</head>
+<body>
+    <div id="divId">divTag</div>
+   <h1 id="h1Title" >h1  my title</h1>
+
+   <input type="radio" name="frute" value="apples">
+    <label for="frute">apples</label> <br> 
+
+    <input type="radio" name="frute" value="orange">
+    <label for="frute">orange</label><br>
+
+    <input type="radio" name="frute" value="lime">
+    <label for="frute">lime</label>
+
+<ul>
+    <li>carrot</li>
+    <li>potates</li>
+    <li>onion</li>
+</ul>
+
+
+<div class="dessert">ice cream</div>
+<div class="dessert">cake</div>
+<div class="dessert">pie</div>
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script>
+
+document.title= "lesosns about DOM";// edit title string 
+//document.location= 'http://www.google.com '
+//console.log(document.URL)
+document.body.style.backgroundColor='lightgreen';   /// change color '<body>...</body
+
+//================== document.getElementById
+    document.getElementById('divId').innerHTML='xoxoxox';// change value by id 
+    console.log(document.getElementById('divId'));
+    
+    const h1Title = document.getElementById('h1Title')
+    
+    h1Title.innerHTML='h1  my title' // change value by innertHTml
+    
+    h1Title.style.backgroundColor='blue'// change color by id
+    
+    chengColor=()=>{
+        if (h1Title.innerText.length>5){
+            h1Title.style.backgroundColor='red'
+        }
+    }
+
+    h1Title.innerText ='this is menu'
+    chengColor()
+    console.log(h1Title.innerText.length);
+    
+
+//==========   document.getElementsByName
+    
+   const byName= document.getElementsByName('frute')
+   console.log(byName[0])   // call value  name by index array 
+
+   byName.forEach(element => {   // metod forEach , call all value array byName 
+    if(element.checked){
+        element.style.backgroundColor='red'
+        console.log(element.value)
+    }
+    
+});
+
+//=========== document.getElementsByTagName  
+    const wegitables = document.getElementsByTagName('li')
+    console.log(wegitables[0].innerText)  // call value 'innerText'  by index[] 
+    wegitables[0].style.backgroundColor='red'   // call backgraundcallor
+
+
+//==============   document.getElementsByClassName
+    const byClass = document.getElementsByClassName('dessert')
+    console.log(byClass[0].innerText)
+
+//================document.queryselector()
+const byQuery  = document.querySelector('#h1Title') // ------- # mean byId
+console.log(byQuery)
+const byQuery1 = document.querySelector('.dessert') // ------- .  mean byClass
+console.log(byQuery1)
+
+//================document.queryselectorAll()
+const byQuery2 = document.querySelectorAll('li')    // ------- by tagName
+console.log(byQuery2[0].innerText)
+const byQuery3 = document.querySelectorAll('[for]')    // ------- by lable For
+console.log(byQuery3[0].innerText)
+
+
+
+
+
+
+
+   
+
+
+ 
+ 
+
+
+    </script>
+</body>
+</html>

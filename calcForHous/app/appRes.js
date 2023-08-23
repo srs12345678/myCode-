@@ -1,6 +1,6 @@
 let url = new URL(window.location);
     let num = url.searchParams.get("num");
-    let dateRet = url.searchParams.get("dateR");
+    //let dateRet = url.searchParams.get("dateR");
     
 
 const resultNumRoom = document.getElementById('resultNumRoom')// num room

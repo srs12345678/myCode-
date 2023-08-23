@@ -6,80 +6,343 @@
     <title>Document</title>
 </head>
 <body>
-
     <p>
-    <script src="appPred.js" defer="defer"></script>
-    </p>
-    <p>Предыдущие показания :</p>
-    <table style="border-collapse: collapse; width: 42.9539%; height: 110px;" border="1">
-    <tbody>
-    <tr style="height: 18px;">
-    <td style="width: 4.59771%; height: 20px;">№</td>
-    <td style="width: 5.86048%; height: 20px; text-align: center;">дат</td>
-    <td style="width: 2.91545%; height: 20px; text-align: center;">&nbsp;Элект.</td>
-    <td style="width: 6.04162%; height: 20px; text-align: center;">Х.вода</td>
-    <td style="width: 6.02394%; height: 20px; text-align: center;">Г.Вода</td>
-    <td style="width: 5.16152%; height: 20px; text-align: center;">инт.</td>
-    <td style="width: 3.96321%; height: 20px; text-align: center;">мус.</td>
-    <td style="width: 3.58771%; height: 20px; text-align: center;">отоп.</td>
-    <td style="width: 4.69596%; height: 20px; text-align: center;">&nbsp;дни</td>
-    </tr>
-    <tr style="height: 18px;">
-    <td style="width: 4.59771%; height: 18px;">1</td>
-    <td style="width: 5.86048%; height: 18px;" id="dataPred1"></td>
-    <td style="width: 2.91545%; height: 18px;"id="elecPred1"></td>
-    <td style="width: 6.04162%; height: 18px;"id="votPred1"></td>
-    <td style="width: 6.02394%; height: 18px;"id="votGorPred1"></td>
-    <td style="width: 5.16152%; height: 18px;"id="intPred1"></td>
-    <td style="width: 3.96321%; height: 18px;"id="musPred1"></td>
-    <td style="width: 3.58771%; height: 18px;"id="otopPred1"></td>
-    <td style="width: 4.69596%; height: 18px;"id="daPrPred1"></td>
-    </tr>
-    <tr style="height: 18px;">
-    <td style="width: 4.59771%; height: 18px;">2</td>
-    <td style="width: 5.86048%; height: 18px;" id="dataPred2"></td>
-    <td style="width: 2.91545%; height: 18px;"id="elecPred2"></td>
-    <td style="width: 6.04162%; height: 18px;"id="votPred2"></td>
-    <td style="width: 6.02394%; height: 18px;"id="votGorPred2"></td>
-    <td style="width: 5.16152%; height: 18px;"id="intPred2"></td>
-    <td style="width: 3.96321%; height: 18px;"id="musPred2"></td>
-    <td style="width: 3.58771%; height: 18px;"id="otopPred2"></td>
-    <td style="width: 4.69596%; height: 18px;"id="daPrPred2"></td>
-    </tr>
-    <tr style="height: 18px;">
-    <td style="width: 4.59771%; height: 18px;">3</td>
-    <td style="width: 5.86048%; height: 18px;" id="dataPred3"></td>
-    <td style="width: 2.91545%; height: 18px;"id="elecPred3"></td>
-    <td style="width: 6.04162%; height: 18px;"id="votPred3"></td>
-    <td style="width: 6.02394%; height: 18px;"id="votGorPred3"></td>
-    <td style="width: 5.16152%; height: 18px;"id="intPred3"></td>
-    <td style="width: 3.96321%; height: 18px;"id="musPred3"></td>
-    <td style="width: 3.58771%; height: 18px;"id="otopPred3"></td>
-    <td style="width: 4.69596%; height: 18px;"id="daPrPred3"></td>
-    </tr>
-    <tr style="height: 18px;">
-    <td style="width: 4.59771%; height: 18px;">4</td>
-    <td style="width: 5.86048%; height: 18pid" id="dataPred4"></td>
-    <td style="width: 2.91545%; height: 18px;"id="elecPred4"></td>
-    <td style="width: 6.04162%; height: 18px;"id="votPred4"></td>
-    <td style="width: 6.02394%; height: 18px;"id="votGorPred4"></td>
-    <td style="width: 5.16152%; height: 18px;"id="intPred4"></td>
-    <td style="width: 3.96321%; height: 18px;"id="musPred4"></td>
-    <td style="width: 3.58771%; height: 18px;"id="otopPred4"></td>
-    <td style="width: 4.69596%; height: 18px;"id="daPrPred4"></td>
-    </tr>
-    <tr style="height: 18px;">
-    <td style="width: 4.59771%; height: 18px;">5</td>
-    <td style="width: 5.86048%; height: 18pid" id="dataPred5"></td>
-    <td style="width: 2.91545%; height: 18px;"id="elecPred5"></td>
-    <td style="width: 6.04162%; height: 18px;"id="votPred5"></td>
-    <td style="width: 6.02394%; height: 18px;"id="votGorPred5"></td>
-    <td style="width: 5.16152%; height: 18px;"id="intPred5"></td>
-    <td style="width: 3.96321%; height: 18px;"id="musPred5"></td>
-    <td style="width: 3.58771%; height: 18px;"id="otopPred5"></td>
-    <td style="width: 4.69596%; height: 18px;"id="daPrPred5"></td>
-    </tr>
-    </tbody>
-    </table>
-    <p></p>
-    <form action="index.html" target="_blank"><button>  назад</button>
+        <script src="app/appPred.js" defer="defer"></script>
+        </p>
+        <p>Предыдущие показания :</p>
+        <table style="border-collapse: collapse; width: 49.8939%; height: 110px;" border="1">
+        <tbody>
+        <tr style="height: 18px;">
+        <td style="width: 4.59771%; height: 20px;">№</td>
+        <td style="width: 5.86048%; height: 20px; text-align: center;">дат</td>
+        <td style="width: 2.71739%; height: 20px; text-align: center;">&nbsp;Элект.</td>
+        <td style="width: 2.71739%; height: 20px; text-align: center;">Х.вода</td>
+        <td style="width: 2.71739%; height: 20px; text-align: center;">Г.Вода</td>
+        <td style="width: 2.5%; height: 20px; text-align: center;">инт.</td>
+        <td style="width: 2.5%; height: 20px; text-align: center;">мус.</td>
+        <td style="width: 3.96321%; height: 20px; text-align: center;">отоп.</td>
+        <td style="width: 3.58771%; height: 20px; text-align: center;">&nbsp;дни</td>
+        <td style="width: 2.34798%; text-align: center;" td=""></td>
+        </tr>
+        <tr style="height: 18px;">
+        <td style="width: 4.59771%; height: 18px;">1</td>
+        <td style="width: 5.86048%; height: 18px;" id="dataPred1"></td>
+        <td style="width: 2.71739%; height: 18px;" id="elecPred1"></td>
+        <td style="width: 2.71739%; height: 18px;" id="votPred1"></td>
+        <td style="width: 2.71739%; height: 18px;" id="votGorPred1"></td>
+        <td style="width: 2.5%; height: 18px;" id="intPred1"></td>
+        <td style="width: 2.5%; height: 18px;" id="musPred1"></td>
+        <td style="width: 3.96321%; height: 18px;" id="otopPred1"></td>
+        <td style="width: 3.58771%; height: 18px;" id="daPrPred1"></td>
+        <td style="width: 2.34798%;" li=""><button name="button1" id="r1">редакт</button></td>
+        </tr>
+        <tr style="height: 18px;">
+        <td style="width: 4.59771%; height: 18px;">2</td>
+        <td style="width: 5.86048%; height: 18px;" id="dataPred2"></td>
+        <td style="width: 2.71739%; height: 18px;" id="elecPred2"></td>
+        <td style="width: 2.71739%; height: 18px;" id="votPred2"></td>
+        <td style="width: 2.71739%; height: 18px;" id="votGorPred2"></td>
+        <td style="width: 2.5%; height: 18px;" id="intPred2"></td>
+        <td style="width: 2.5%; height: 18px;" id="musPred2"></td>
+        <td style="width: 3.96321%; height: 18px;" id="otopPred2"></td>
+        <td style="width: 3.58771%; height: 18px;" id="daPrPred2"></td>
+        <td style="width: 2.34798%;" li=""><button name="button1" id="r2">редакт</button></td>
+        </tr>
+        <tr style="height: 18px;">
+        <td style="width: 4.59771%; height: 18px;">3</td>
+        <td style="width: 5.86048%; height: 18px;" id="dataPred3"></td>
+        <td style="width: 2.71739%; height: 18px;" id="elecPred3"></td>
+        <td style="width: 2.71739%; height: 18px;" id="votPred3"></td>
+        <td style="width: 2.71739%; height: 18px;" id="votGorPred3"></td>
+        <td style="width: 2.5%; height: 18px;" id="intPred3"></td>
+        <td style="width: 2.5%; height: 18px;" id="musPred3"></td>
+        <td style="width: 3.96321%; height: 18px;" id="otopPred3"></td>
+        <td style="width: 3.58771%; height: 18px;" id="daPrPred3"></td>
+        <td style="width: 2.34798%;" li=""><button name="button1" id="r3">редакт</button></td>
+        </tr>
+        <tr style="height: 18px;">
+        <td style="width: 4.59771%; height: 18px;">4</td>
+        <td style="width: 5.86048%; height: 18pid;" id="dataPred4"></td>
+        <td style="width: 2.71739%; height: 18px;" id="elecPred4"></td>
+        <td style="width: 2.71739%; height: 18px;" id="votPred4"></td>
+        <td style="width: 2.71739%; height: 18px;" id="votGorPred4"></td>
+        <td style="width: 2.5%; height: 18px;" id="intPred4"></td>
+        <td style="width: 2.5%; height: 18px;" id="musPred4"></td>
+        <td style="width: 3.96321%; height: 18px;" id="otopPred4"></td>
+        <td style="width: 3.58771%; height: 18px;" id="daPrPred4"></td>
+        <td style="width: 2.34798%;" li=""><button name="button1" id="r4">редакт</button></td>
+        </tr>
+        <tr style="height: 18px;">
+        <td style="width: 4.59771%; height: 18px;">5</td>
+        <td style="width: 5.86048%; height: 18pid;" id="dataPred5"></td>
+        <td style="width: 2.71739%; height: 18px;" id="elecPred5"></td>
+        <td style="width: 2.71739%; height: 18px;" id="votPred5"></td>
+        <td style="width: 2.71739%; height: 18px;" id="votGorPred5"></td>
+        <td style="width: 2.5%; height: 18px;" id="intPred5"></td>
+        <td style="width: 2.5%; height: 18px;" id="musPred5"></td>
+        <td style="width: 3.96321%; height: 18px;" id="otopPred5"></td>
+        <td style="width: 3.58771%; height: 18px;" id="daPrPred5"></td>
+        <td style="width: 2.34798%;" li=""><button name="button1" id="r5">редакт</button></td>
+        </tr>
+        </tbody>
+        </table>
+        <p></p>
+        <form action="index.html" target="_blank"><button> назад</button></form>
+        <p></p>
+       
+
+        <table style="border-collapse: collapse; width: 63.0168%; height: 424px;" border="1">
+            <tbody>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;"></td>
+            <td style="width: 9.94744%; height: 18px;">0</td>
+            <td style="width: 8.5071%; height: 18px;">1</td>
+            <td style="width: 9.39402%; height: 18px;">2</td>
+            <td style="width: 9.03035%; height: 18px;">3</td>
+            <td style="width: 9.13598%; height: 18px;">4</td>
+            <td style="width: 8.66853%; height: 18px;">5</td>
+            <td style="width: 8.66853%; height: 18px;">6</td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">1</td>
+            <td style="width: 9.94744%; height: 18px;"></td>
+            <td style="width: 8.5071%; height: 18px;"></td>
+            <td style="width: 9.39402%; height: 18px;"></td>
+            <td style="width: 9.03035%; height: 18px;"></td>
+            <td style="width: 9.13598%; height: 18px;"></td>
+            <td style="width: 8.66853%; height: 18px;"></td>
+            <td style="width: 8.66853%; height: 18px;"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">эл</td>
+            <td style="width: 9.94744%; height: 18px;" id="r101"></td>
+            <td style="width: 8.5071%; height: 18px;" id="r111"></td>
+            <td style="width: 9.39402%; height: 18px;" id="r121"></td>
+            <td style="width: 9.03035%; height: 18px;" id="r131"></td>
+            <td style="width: 9.13598%; height: 18px;" id="r141"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r151"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r161"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">хв</td>
+            <td style="width: 9.94744%; height: 18px;" id="r102"></td>
+            <td style="width: 8.5071%; height: 18px;" id="r112"></td>
+            <td style="width: 9.39402%; height: 18px;" id="r122"></td>
+            <td style="width: 9.03035%; height: 18px;" id="r132"></td>
+            <td style="width: 9.13598%; height: 18px;" id="r142"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r152"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r162"></td>
+            </tr>
+            <tr style="height: 18px;" >
+            <td style="width: 8.33335%; height: 18px;">гв</td>
+            <td style="width: 9.94744%; height: 18px;" id="r103"></td>
+            <td style="width: 8.5071%; height: 18px;" id="r113"></td>
+            <td style="width: 9.39402%; height: 18px;" id="r123"></td>
+            <td style="width: 9.03035%; height: 18px;" id="r133"></td>
+            <td style="width: 9.13598%; height: 18px;" id="r143"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r153"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r163"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;"></td>
+            <td style="width: 9.94744%; height: 18px;" ></td>
+            <td style="width: 8.5071%; height: 18px;" ></td>
+            <td style="width: 9.39402%; height: 18px;" ></td>
+            <td style="width: 9.03035%; height: 18px;" ></td>
+            <td style="width: 9.13598%; height: 18px;" ></td>
+            <td style="width: 8.66853%; height: 18px;" ></td>
+            <td style="width: 8.66853%; height: 18px;" ></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">2</td>
+            <td style="width: 9.94744%; height: 18px;" ></td>
+            <td style="width: 8.5071%; height: 18px;" ></td>
+            <td style="width: 9.39402%; height: 18px;" ></td>
+            <td style="width: 9.03035%; height: 18px;" ></td>
+            <td style="width: 9.13598%; height: 18px;" ></td>
+            <td style="width: 8.66853%; height: 18px;" ></td>
+            <td style="width: 8.66853%; height: 18px;" ></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">эл</td>
+            <td style="width: 9.94744%; height: 18px;" id="r201"></td>
+            <td style="width: 8.5071%; height: 18px;" id="r211"></td>
+            <td style="width: 9.39402%; height: 18px;" id="r221"></td>
+            <td style="width: 9.03035%; height: 18px;" id="r231"></td>
+            <td style="width: 9.13598%; height: 18px;" id="r241"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r251"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r261"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">хв</td>
+            <td style="width: 9.94744%; height: 18px;" id="r202"></td>
+            <td style="width: 8.5071%; height: 18px;" id="r212"></td>
+            <td style="width: 9.39402%; height: 18px;" id="r222"></td>
+            <td style="width: 9.03035%; height: 18px;" id="r232"></td>
+            <td style="width: 9.13598%; height: 18px;" id="r242"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r252"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r262"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">гв</td>
+            <td style="width: 9.94744%; height: 18px;" id="r203"></td>
+            <td style="width: 8.5071%; height: 18px;" id="r213"></td>
+            <td style="width: 9.39402%; height: 18px;" id="r223"></td>
+            <td style="width: 9.03035%; height: 18px;" id="r233"></td>
+            <td style="width: 9.13598%; height: 18px;" id="r243"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r253"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r263"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;"></td>
+            <td style="width: 9.94744%; height: 18px;"></td>
+            <td style="width: 8.5071%; height: 18px;"></td>
+            <td style="width: 9.39402%; height: 18px;"></td>
+            <td style="width: 9.03035%; height: 18px;"></td>
+            <td style="width: 9.13598%; height: 18px;"></td>
+            <td style="width: 8.66853%; height: 18px;"></td>
+            <td style="width: 8.66853%; height: 18px;"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">3</td>
+            <td style="width: 9.94744%; height: 18px;"></td>
+            <td style="width: 8.5071%; height: 18px;"></td>
+            <td style="width: 9.39402%; height: 18px;"></td>
+            <td style="width: 9.03035%; height: 18px;"></td>
+            <td style="width: 9.13598%; height: 18px;"></td>
+            <td style="width: 8.66853%; height: 18px;"></td>
+            <td style="width: 8.66853%; height: 18px;"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">эл</td>
+            <td style="width: 9.94744%; height: 18px;" id="r301"></td>
+            <td style="width: 8.5071%; height: 18px;" id="r311"></td>
+            <td style="width: 9.39402%; height: 18px;" id="r321"></td>
+            <td style="width: 9.03035%; height: 18px;" id="r331"></td>
+            <td style="width: 9.13598%; height: 18px;" id="r341"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r351"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r361"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">хв</td>
+            <td style="width: 9.94744%; height: 18px;" id="r302"></td>
+            <td style="width: 8.5071%; height: 18px;" id="r312"></td>
+            <td style="width: 9.39402%; height: 18px;" id="r322"></td>
+            <td style="width: 9.03035%; height: 18px;" id="r332"></td>
+            <td style="width: 9.13598%; height: 18px;" id="r342"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r352"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r362"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">гв</td>
+            <td style="width: 9.94744%; height: 18px;" id="r303"></td>
+            <td style="width: 8.5071%; height: 18px;" id="r313"></td>
+            <td style="width: 9.39402%; height: 18px;" id="r323"></td>
+            <td style="width: 9.03035%; height: 18px;" id="r333"></td>
+            <td style="width: 9.13598%; height: 18px;" id="r343"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r353"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r363"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;"></td>
+            <td style="width: 9.94744%; height: 18px;" ></td>
+            <td style="width: 8.5071%; height: 18px;" ></td>
+            <td style="width: 9.39402%; height: 18px;" ></td>
+            <td style="width: 9.03035%; height: 18px;" ></td>
+            <td style="width: 9.13598%; height: 18px;" ></td>
+            <td style="width: 8.66853%; height: 18px;" ></td>
+            <td style="width: 8.66853%; height: 18px;" ></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">4</td>
+            <td style="width: 9.94744%; height: 18px;"></td>
+            <td style="width: 8.5071%; height: 18px;"></td>
+            <td style="width: 9.39402%; height: 18px;"></td>
+            <td style="width: 9.03035%; height: 18px;"></td>
+            <td style="width: 9.13598%; height: 18px;"></td>
+            <td style="width: 8.66853%; height: 18px;"></td>
+            <td style="width: 8.66853%; height: 18px;"></td>
+            </tr>
+            <tr style="height: 10px;">
+            <td style="width: 8.33335%; height: 10px;">эл</td>
+            <td style="width: 9.94744%; height: 10px;" id="r401"></td>
+            <td style="width: 8.5071%; height: 10px;" id="r411"></td>
+            <td style="width: 9.39402%; height: 10px;" id="r421"></td>
+            <td style="width: 9.03035%; height: 10px;" id="r431"></td>
+            <td style="width: 9.13598%; height: 10px;" id="r441"></td>
+            <td style="width: 8.66853%; height: 10px;" id="r451"></td>
+            <td style="width: 8.66853%; height: 10px;" id="r461"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">хв</td>
+            <td style="width: 9.94744%; height: 18px;" id="r402"></td>
+            <td style="width: 8.5071%; height: 18px;" id="r412"></td>
+            <td style="width: 9.39402%; height: 18px;" id="r422"></td>
+            <td style="width: 9.03035%; height: 18px;" id="r432"></td>
+            <td style="width: 9.13598%; height: 18px;" id="r442"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r452"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r462"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">гв</td>
+            <td style="width: 9.94744%; height: 18px;" id="r403"></td>
+            <td style="width: 8.5071%; height: 18px;" id="r413"></td>
+            <td style="width: 9.39402%; height: 18px;" id="r423"></td>
+            <td style="width: 9.03035%; height: 18px;" id="r433"></td>
+            <td style="width: 9.13598%; height: 18px;" id="r443"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r453"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r463"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;"></td>
+            <td style="width: 9.94744%; height: 18px;"></td>
+            <td style="width: 8.5071%; height: 18px;"></td>
+            <td style="width: 9.39402%; height: 18px;"></td>
+            <td style="width: 9.03035%; height: 18px;"></td>
+            <td style="width: 9.13598%; height: 18px;"></td>
+            <td style="width: 8.66853%; height: 18px;"></td>
+            <td style="width: 8.66853%; height: 18px;"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">5</td>
+            <td style="width: 9.94744%; height: 18px;"></td>
+            <td style="width: 8.5071%; height: 18px;"></td>
+            <td style="width: 9.39402%; height: 18px;"></td>
+            <td style="width: 9.03035%; height: 18px;"></td>
+            <td style="width: 9.13598%; height: 18px;"></td>
+            <td style="width: 8.66853%; height: 18px;"></td>
+            <td style="width: 8.66853%; height: 18px;"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">эл</td>
+            <td style="width: 9.94744%; height: 18px;" id="r501"></td>
+            <td style="width: 8.5071%; height: 18px;" id="r511"></td>
+            <td style="width: 9.39402%; height: 18px;" id="r521"></td>
+            <td style="width: 9.03035%; height: 18px;" id="r531"></td>
+            <td style="width: 9.13598%; height: 18px;" id="r541"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r551"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r561"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">хв</td>
+            <td style="width: 9.94744%; height: 18px;" id="r502"></td>
+            <td style="width: 8.5071%; height: 18px;" id="r512"></td>
+            <td style="width: 9.39402%; height: 18px;" id="r522"></td>
+            <td style="width: 9.03035%; height: 18px;" id="r532"></td>
+            <td style="width: 9.13598%; height: 18px;" id="r542"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r552"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r562"></td>
+            </tr>
+            <tr style="height: 18px;">
+            <td style="width: 8.33335%; height: 18px;">гв</td>
+            <td style="width: 9.94744%; height: 18px;" id="r503"></td>
+            <td style="width: 8.5071%; height: 18px;" id="r513"></td>
+            <td style="width: 9.39402%; height: 18px;" id="r523"></td>
+            <td style="width: 9.03035%; height: 18px;" id="r533"></td>
+            <td style="width: 9.13598%; height: 18px;" id="r543"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r553"></td>
+            <td style="width: 8.66853%; height: 18px;" id="r563"></td>
+            </tr>
+            </tbody>
+            </table>
+            <p></p>
