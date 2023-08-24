@@ -19,10 +19,31 @@
     
     
 
-    <p>Расчет КУ для квартиры № &nbsp; <label for="elect">: </label> <input id="numRum" max="5" min="1" name="elect" step="1" type="number" value="1" /></p>
-    <div>Колличество дней:<label for="voterH">:&nbsp;</label><input id="numDay" max="30" min="1" name="numDay" step="1" type="number" value="30" /> при проживании менне месяца</div>
-    <p><label for="date">Текущая дата: </label> <input type="date"  id="date" name="date"/></p>
-    <p>Показания :</p>
+    <p>Расчет КУ для квартиры № &nbsp; <label for="elect">: </label> <input id="numRum" max="5" min="1" name="elect" step="1" type="number" value=""/></p>
+    
+    <p><label for="dateOld">Начальная  дата: </label> <input type="date"  id="dateOld" name="dateOld"/></p>
+            <script>
+               // <div>Колличество дней:<label for="voterH">:&nbsp;</label><input id="numDay" max="100" min="1" name="numDay" step="1" type="number" value="30" /> при проживании менне месяца</div>
+                            let input = document.getElementById('numRum');
+                            let tempNr =input.value
+                            input.onchange = function() {
+                            tempNr=input.value
+                            console.log('Элемент вышел из фокуса',tempNr);
+                            showOldDate()
+                            };
+
+                        showOldDate=()=>{
+                        const retOld = JSON.parse(localStorage.getItem(`Room${tempNr}`))
+                        document.getElementById('dateOld').value = retOld[0]
+            }
+            </script>
+   <p><label for="date">Текущая дата: </label> <input type="date"  id="date" name="date"/></p>
+
+            <script> 
+                    document.getElementById('date').valueAsDate = new Date();
+            </script>
+    
+   <p>Показания :</p>
     <p>Электричество :<label for="elect">: </label> <input id="elect" max="100000" min="0" name="elect" step="1" type="number" value="0" /></p>
     <p>Вода Холодная :<label for="voter">:&nbsp;</label><input id="voter" max="100000" min="0" name="voter" step="1" type="number" value="0" /></p>
     <p>Вода Горячая :<label for="voterH">:&nbsp;</label><input id="voterH" max="100000" min="0" name="voter" step="1" type="number" value="0" /></p>

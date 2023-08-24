@@ -2,10 +2,11 @@
 //-----
 const numRum = document.getElementById('numRum')// num room
 const date = document.getElementById('date')// curent data
+const dateOld = document.getElementById('dateOld')// old Date 
 const elect = document.getElementById('elect')// curent value electrica
 const voter = document.getElementById('voter')// curent value cold water
 const voterH = document.getElementById('voterH')//// curent value hot water
-const numDay = document.getElementById('numDay')//// curent value hot water
+
 
 //checked
 const internet = document.getElementById('internet')// curent value add internet
@@ -38,34 +39,25 @@ curentTarifSh() // call () show tarifs
 tarifBtn.onclick =()=>{  
   window.location.href=`tarifi.html`
 }
-/*
-copyToBak=()=>{//  if old value undefined , copy value to old value 
-  xxx = localStorage.getItem(`Room${nf}`)
-  alert(xxx)
-  xyx= localStorage.getItem(`Room${nf}_bak`)
-  yyy=localStorage.setItem( `Room${nf}_bak`,xxx);
-
-  if(xyx==undefined||xyx=="null")
-  {
-    localStorage.setItem(`Room${nf}`,JSON.stringify(valueAll))
-    yyy=xxx
-    console.log('копировано',xxx)
-    return
-  }
-  console.log('унаследованно',)
-}
-*/
 
 submit.onclick = () => {  
-  if (date.value==""){   // chek date
-    alert("введите дату")
-    return
-    }
+    if (numRum.value==""){   // chek  number 
+      document.getElementById('numRum').style.backgroundColor='red'// painting btn in red
+      alert("введите номер квартиры ")
+      return
+      }
 
-    if(curentTarifShowPars==null){
-      alert("тарифы не заданы")
-    return
-    }
+      if (dateOld.value==""){   // chek date
+        document.getElementById('dateOld').style.backgroundColor='red'// painting btn in red
+        alert("введите дату")
+        return
+        }
+
+      if(curentTarifShowPars==null){
+        document.getElementById('tarifBtn').style.backgroundColor='red'// painting btn in red
+        alert("тарифы не заданы")
+      return
+      }
     // add +  int trash warm
 
   let addInter
@@ -74,14 +66,21 @@ submit.onclick = () => {
    if (internet.checked){addInter =1}else {addInter =0}
    if (Otoplenie.checked){addOtop =1}else {addOtop =0}
    if (Musor.checked){addTrash =1}else {addTrash =0}
-   //--------
    
-   valueAll = [date.value,elect.value,voter.value, voterH.value,addInter,addOtop,addTrash,numDay.value ]
-   nf=numRum.value;
+   //--- calculated days 
+   let date1 = new Date(date.value);
+ let date2 = new Date(dateOld.value );
+ let timeDiff = Math.abs(date2.getTime() - date1.getTime());
+ let diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+ 
+ //alert(diffDays);
+ 
+   //-------- chec corect 
    
-   let chekCorect = confirm(`данные коректны? Дата: ${date.value}, елект.: ${elect.value}, хв.: ${voter.value}, гв.: ${voterH.value}, полный месяц: ${numDay.value} дней  `   );
-   
-   
+   let chekCorect = confirm(`данные коректны? Дата: ${date.value}, предыдущая дата:${dateOld.value}, елект.: ${elect.value}, хв.: ${voter.value}, гв.: ${voterH.value}, полный месяц: ${diffDays} дней  `   );
+  
+   valueAll = [date.value,elect.value,voter.value, voterH.value,addInter,addOtop,addTrash,diffDays,dateOld.value ]
+   nf=numRum.value;   
    localStorage.setItem('curDate',JSON.stringify( date.value) )
 
    //copyToBak()
@@ -113,7 +112,5 @@ submit.onclick = () => {
 }
 
 
-
   
-
-
+   

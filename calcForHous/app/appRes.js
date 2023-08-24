@@ -46,12 +46,18 @@ let tarif = JSON.parse(localStorage.getItem(`curPrice`))
    resultHvRez.textContent=(ret[2]-retOld[2])*tarif[1]+' руб.'
    resultGv.textContent= 'текущ.: '+ret[3]+'; прош.: '+retOld[3]+' тариф: '+tarif[2]+'; разница :'+(ret[3]-retOld[3])
    resultGvRez.textContent=(ret[3]-retOld[3])*tarif[2]+' руб.'
-  // resultIntern.textContent= 
-   resultInternRez.textContent=tarif[3]*ret[4]/30*ret[7]+' руб.'
-   //resultMusor.textContent= tarif[4]*ret[6]+' руб.'//6
-   resultMusorRez.textContent=tarif[4]*ret[6]/30*ret[7]+' руб.'
-   //resultOtop.textContent= tarif[5]*ret[5]+' руб.'//5
-   resultOtopRez.textContent=tarif[5]*ret[5]/30*ret[7]+' руб.'
+
+
+//    // resultIntern.textContent= 
+    resultInternRez.textContent=tarif[3]*ret[4]+' руб.'
+//    //resultMusor.textContent= tarif[4]*ret[6]+' руб.'//6
+    resultMusorRez.textContent=tarif[4]*ret[6]+' руб.'
+//    //resultOtop.textContent= tarif[5]*ret[5]+' руб.'//5
+    resultOtopRez.textContent=tarif[5]*ret[5]+' руб.'
+
+
+
+
    //second pilon
    //summaAll.textContent= 
    summaAllRez.textContent= ((ret[1]-retOld[1])*tarif[0])+ ((ret[2]-retOld[2])*tarif[1])+((ret[3]-retOld[3])*tarif[2])+(tarif[3]*ret[4])+(tarif[4]*ret[6])+(tarif[5]*ret[5])+' руб.'
