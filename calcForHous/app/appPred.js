@@ -142,7 +142,7 @@ const room=[ // aray with varible and localsto
       ]
 
 
-      ///----elect 1 room
+      ///----1 room
 
 
       showBakvalue1=(x,y,z)=>{
