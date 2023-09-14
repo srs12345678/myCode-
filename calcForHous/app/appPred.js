@@ -300,5 +300,5 @@ function1('r3')
 
 
 
-//---- Math.max\
-Math.max((roomBak[0][0][1]),(roomBak[0][0][2]))
+// //---- Math.max\
+// Math.max((roomBak[0][0][1]),(roomBak[0][0][2]))

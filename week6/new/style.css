@@ -1,0 +1,72 @@
+#body{
+    padding: 20px; 
+    background-color: beige;
+}
+#top{
+    position: sticky;
+    
+    border: 1px solid;
+    height: 350px;
+   background-color: rgb(236, 177, 89);
+}
+
+#topLogo{
+    position: absolute;
+    width: 25%;
+    height: 300px;
+    top: 0; left: 0;
+    background-color: rgb(58, 175, 22);
+   
+    
+}
+
+#topCentr{
+    background-color: blue;
+    position: absolute;
+    width: 45%;
+    height: 300px;
+    top: 0; left: 25%;
+    
+}
+#topRight{
+
+    background-color: rgb(70, 17, 65);
+    position: absolute;
+    width: 30%;
+    height: 300px;
+    top: 0; left: 70%;
+
+}
+#topMenu{
+    background-color: blueviolet;
+    position: absolute;
+    height: 50px; 
+    width: 70%;
+    bottom: 0;
+
+}
+#topMenuRight{
+    background-color: rgb(185, 140, 174);
+    position: absolute;
+    height: 50px; 
+
+    width: 30%;
+    bottom: 0;
+    right: 0%;
+
+}
+
+/* ----------main ---------------- */
+
+#main{
+
+    
+}
+
+
+
+
+
+
+
+

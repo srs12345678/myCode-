@@ -1,0 +1,13 @@
+#data,#data *{
+    border: solid 1px;
+    border-collapse: collapse;
+}
+
+:root{
+    --bgColor: 'black';
+  }
+
+  #doc{
+    background-color: --bgColor;
+   }
+   

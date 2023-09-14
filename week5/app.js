@@ -1,77 +1,67 @@
+const accaunt= JSON.parse(localStorage.getItem(`Accaunt`))||[]
+let yy
+
+let searchAccaunt =(loginUser)=>{
+    yy= accaunt.find(user => user.login ===loginUser)||[]
+}
+
 
 
 class User {
     constructor(login,password,email){
-        this.login=login.trim().toLowerCase()
+        this.login=login.toLowerCase().trim()
         this.password=password
         this.email=email.toLowerCase().trim()
         this.id
-    
-        
     }
     editPassword(newPassword){
         this.password=newPassword
-        let temp=JSON.parse(localStorage.getItem(`Accaunt`))
-        temp[this.id][1]=this.password
-        localStorage.setItem(`Accaunt`,JSON.stringify(temp))
+        accaunt[this.id][1]=this.password
+        localStorage.setItem(`Accaunt`,JSON.stringify(accaunt))
     }
     
     editEmail(newEmail){
         this.email=newEmail
-        let temp=JSON.parse(localStorage.getItem(`Accaunt`))
-        temp[this.id][2]=newEmail
-        localStorage.setItem(`Accaunt`,JSON.stringify(temp))
+        accaunt[this.id][2]=newEmail
+        localStorage.setItem(`Accaunt`,JSON.stringify(accaunt))
     }
     
     deleteAccaunt(){
-        let temp=JSON.parse(localStorage.getItem(`Accaunt`))
-         delete temp[this.id]
-        localStorage.setItem(`Accaunt`,JSON.stringify(temp))
+         delete accaunt[this.id]
+        localStorage.setItem(`Accaunt`,JSON.stringify(accaunt))
     }
 }
 
 class SimplUser extends User{
-    constructor(login,password,email){
-        super(login,password,email,);
-        this.newAccaunt(login,password,email)
+            constructor(login,password,email){
+            super(login,password,email,);
+            this.newAccaunt(login,password,email)
     }
 
         newAccaunt(login,password,email){
             this.makeId()
-            const id =this.id
-            console.log( 'calculeted_',id)
-            const temp=JSON.parse(localStorage.getItem(`Accaunt`))
-        
+            const id = this.id
             
-            if(temp!==null){
-             temp[id]=[login,password,email]
-             const temp2 = temp
-             console.log(id,'второй_', temp2 )
-             localStorage.setItem(`Accaunt`,JSON.stringify(temp2))
-             return;
-            }
+            const accaunt= JSON.parse(localStorage.getItem(`Accaunt`))||[]
 
-            localStorage.setItem(`Accaunt`,JSON.stringify({1:[login,password,email]}))
-            console.log('id not defaund',id )
-        }   
+            accaunt.push({
+                login:this.login,
+                password:this.password,
+                email:this.email,
+            })   
+
+                localStorage.setItem('Accaunt',JSON.stringify(accaunt))
+            }   
+
         
 
         makeId(){
-            const temp = localStorage.getItem('idNum')
-            if ( temp!==null&&temp!==undefined){
-                this.id =temp
-                ++this.id
-                localStorage.setItem('idNum',this.id)
-                //console.log('первое ','localSt_',temp ,"ia___",this.id)
-                return;
-            }
-            localStorage.setItem('idNum',1)
-            this.id = localStorage.getItem('idNum')
-            console.log('второе-____', localStorage.getItem('idNum'))
+            const oldId  = parseInt(localStorage.getItem('idNum'))||0
+            this.id=oldId+1
+            localStorage.setItem('idNum',this.id)
+
         }
-        
-    
-        
+          
     }
 
     class SuperUser extends User{
@@ -105,9 +95,7 @@ class SimplUser extends User{
             
         }
 }
-
-const div0=document.getElementById('div0')
-const div1=document.getElementById('div1')
+const div= document.getElementsByClassName('div')
 const reg=document.getElementById('reg')
 const forReg=document.getElementById('forReg')
 const enter=document.getElementById('enter')
@@ -122,39 +110,48 @@ const mess= document.getElementById("message")
 
 // hide&show div
 
-showHide=(z)=> { 
-    div1.style.display = z;
+showHide=(z,y,w)=> { 
+    div[1].style.display = z;
+    div[2].style.display = y
+    div[3].style.display = w
 }
-showHide("none")
+showHide("none","none","none")
 
 reg.onclick=()=>{
     showHide('') 
-    div0.style.display ='none'
+    div[0].style.display ='none'
+   
 }
 
 // regest
 chekValidValue=()=>{}
 
 forReg.onclick=()=>{
-    let registration = new SimplUser(`'${loginReg.value}'`,`'${passwordReg.value}'`,`'${emailReg.value}'`)
+    let registration = new SimplUser(loginReg.value,passwordReg.value,emailReg.value)
     window.location.href=`login.html`
     
 }
+enter.onclick=()=>{
+    searchAccaunt(login.value)
+   
+    if(yy.login==undefined){
+        showHide("none","","none")
+        //console.log('Учетная запись отсутствует')
+        yy=undefined
+        return;
+    }
+    if(login.value==yy.login&&password.value==yy.password) {
+       //console.log('добро пожаловать')
+        location.href ="/curent/calcForHous/index.html"
 
-let temp= JSON.parse(localStorage.getItem(`Accaunt`))
+       yy=undefined
+       return;
+    }
+    //console.log('учетные данные неверны')
+    showHide("none","none","")
+    yy=undefined
 
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
@@ -196,9 +193,6 @@ let temp= JSON.parse(localStorage.getItem(`Accaunt`))
 // temp3={temp1,1:qqqq}
 // localStorage.setItem(`test`,JSON.stringify(temp3))
 // let temp4=JSON.parse(localStorage.getItem(`test`))
-
-
-
 
 
 

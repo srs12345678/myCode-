@@ -1,0 +1,187 @@
+
+
+h1{color: blue;}
+p{color: rgb(124, 124, 158);}
+
+/* for id  */
+
+#p1{color: black;}
+#p2{color: rgb(136, 45, 45);}
+
+/*  for  class  */
+
+.class3 {color: blueviolet;}
+.class4 {color: rgb(54, 136, 88);}
+
+
+/* font famely */
+
+
+.class1{
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+
+/*----------------- border style ----------------- */
+p{
+    border-style:groove;
+    border-width: 5px;
+    border-color: aqua;
+    border-radius: 10px;
+    padding: 20px; /*  space betwin border and text */
+
+}
+
+/*--------------- background collor ------------------ */
+/* 
+body{ 
+     background-color: bisque; 
+       background: linear-gradient(to right, skyblue,lightgreen);
+       background-attachment: fixed; 
+   
+}
+ */
+
+/* ---------------------backgraun img--------------------- */
+/* 
+body{
+    
+    background-image: url(Screenshot_20230516_171901.png);
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+
+} */
+
+/* ------------------margin - space araund element -------------- */
+
+/* padding: 20px;  spase Around text  */
+/* #box1{
+    border-style: solid;
+    width: 250px;
+    height: 170px;
+    font-size: 22px;
+    background: greenyellow;
+
+    padding: 20px; 
+
+
+}
+#box2{
+    border-style: solid;
+    width: 250px;
+    height: 170px;
+    font-size: 22px;
+    background: rgb(174, 162, 190);
+
+    padding: 20px; 
+
+}
+
+
+#body{
+    border-style: solid;
+ 
+    padding: 20px;
+
+
+
+}
+ */
+/* -------------------------------------margin--------------------- */
+
+ #box1{
+    border-style: solid;
+    width: 250px;
+    height: 170px;
+    font-size: 22px;
+    background: greenyellow;
+     margin-top: 10px;
+     margin-left: 20px;
+     margin-bottom: 10px;
+    }
+
+#box2{
+    border-style: solid;
+    width: 250px;
+    height: 170px;
+    font-size: 22px;
+    background: rgb(174, 162, 190);
+
+    margin-left: auto;
+    margin-bottom: 10px;
+
+    }
+
+
+#body{
+    border-style: solid;
+ 
+ }
+
+ /* -----------------------------------float ----------------------------
+ position element to the left side at conteiner 
+ */
+
+  .boxFloat{
+
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    font-size: 40px;
+    text-align: center;
+    background: lightcyan;
+
+    float:right;
+
+    }
+
+
+    .classP{
+        clear: right;
+    }
+
+    
+#div1{
+border: 1px solid;
+width: 300px;
+height: 300px;
+background-color: aqua;
+
+position:relative ;
+top: 150px;
+left: 500px;
+
+}
+
+#div2{
+
+    border: 1px solid;
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+
+    position:absolute;
+    top: 1px;
+    right: 70%;
+
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
